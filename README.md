@@ -24,7 +24,7 @@ Si sabes usar Docker puedes descargar un Container de MySQL aca: [crear un conte
 
 Nota: Verifica el Port de salida
 
-En caso de querer instalar el servidor de MySQL descarga e installa el server [Download MySQL Server](crear un contenedor con Docker-Mysql)
+En caso de querer instalar el servidor de MySQL descarga e installa el server [Download MySQL Server](https://dev.mysql.com/downloads/mysql/)
 
 
 ### Configurar Composer
@@ -33,7 +33,7 @@ Composer es un manejador de paquetes para PHP, asi como NPM, Maven o NuGet, debe
 
 ### Configurar Laravel
 
-Deberas instalar las dependecias de Laravel con el siguiente comando
+Luego de haber clonado el repositorio, ingresa a la carpeta por medio de Consola, deberas instalar las dependecias de Laravel con el siguiente comando
 
 `composer install --ignore-platform-reqs`
 
