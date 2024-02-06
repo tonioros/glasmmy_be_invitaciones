@@ -1,23 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Glassmy Invitaciones Back End
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Proyect hecho con Laravel v10 para servir datos para proyecto de Invitaciones, Confirmacion y presentacion de datos de invitados
+
+## Instalacion
+Si eres usuario Windows puedes usar XAMPP y ahorrarte el resto del tutorial: [XAMPP Apache + MariaDB + PHP + Perl](https://www.apachefriends.org/es/index.html)
+
+En caso que no sigue los siguientes pasos
+### Instalar PHP
+Para configurarlo debes tener instalado PHP v8.1^, depende tu OS los pasos cambiaran: 
+
+Windows: [How to install PHP on Windows](https://www.geeksforgeeks.org/how-to-install-php-in-windows-10/)
+
+Linux: [How to Install PHP on Linux?
+](https://www.geeksforgeeks.org/how-to-install-php-on-linux/)
+
+MacOS: [How to Install PHP on MacOS?
+](https://www.geeksforgeeks.org/how-to-install-php-on-macos/)
+
+### Instalar MySQL
+Si sabes usar Docker puedes descargar un Container de MySQL aca: [crear un contenedor con Docker-Mysql](https://platzi.com/tutoriales/1432-docker-2018/3268-como-crear-un-contenedor-con-docker-mysql-y-persistir-la-informacion/)
+
+Nota: Verifica el Port de salida
+
+En caso de querer instalar el servidor de MySQL descarga e installa el server [Download MySQL Server](crear un contenedor con Docker-Mysql)
+
+
+### Configurar Composer
+
+Composer es un manejador de paquetes para PHP, asi como NPM, Maven o NuGet, deberas configurar Composer dentro de tu entorno: [Download Composer](https://getcomposer.org/download/)
+
+### Configurar Laravel
+
+Deberas instalar las dependecias de Laravel con el siguiente comando
+
+`composer install --ignore-platform-reqs`
+
+Esto tomara unos minutos, ve por un ☕/🍺/🥤 lo que prefieras
+
+Luego de esto deberas ejecutar, esto generara un HASH unico el cual servidara para generar claves HASH internas:
+
+`php artisan key:generate`
+
+Configura el archivo .env, aca deberas agregar credenciales de BD, Correo y mas
+
+## Iniciar Proyecto
+
+Para iniciar el proyecto ejecuta
+
+`php artisan serve`
+
+Si obtienes algo como esto:
+
+`INFO  Server running on [http://127.0.0.1:8000].
+Press Ctrl+C to stop the server`
+
+Felicidades!! has logrado iniciar el proyecto con exito, enjoy! 🙌🏽🎉🍾🥂
 
 ## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -28,38 +67,6 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
