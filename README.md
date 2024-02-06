@@ -1,6 +1,8 @@
 # Glassmy Invitaciones Back End
 
-Proyect hecho con Laravel v10 para servir datos para proyecto de Invitaciones, Confirmacion y presentacion de datos de invitados
+Proyecto hecho con Laravel v10 para servir datos para proyecto de Invitaciones, Confirmacion y presentacion de datos de invitados
+
+Este README supone que ud tiene conocimiento de Laravel, en caso de que no, al final estan los links de la documentacion de Laravel.
 
 ## Instalacion
 Si eres usuario Windows puedes usar XAMPP y ahorrarte el resto del tutorial: [XAMPP Apache + MariaDB + PHP + Perl](https://www.apachefriends.org/es/index.html)
@@ -56,6 +58,32 @@ Press Ctrl+C to stop the server`
 
 Felicidades!! has logrado iniciar el proyecto con exito, enjoy! 🙌🏽🎉🍾🥂
 
+### Migracion de tablas de BD
+
+Este proyecto usa la metodologia Model First, es decir la BD se basa en los objetos de modelo de datos, para crear
+las tablas debes de considerar lo siguiente:
+1. Haber instalado MySQL y configurado un usuario para accesos del proyecto
+2. Agregar credenciales al archivo .env
+3. La Base de datos vacia debe existir antes de ejecutar las migraciones, y debe estar configurada tambien en el .env
+
+Para ejecutar las migraciones debes de ejecutar el comando
+
+`php artisan migrate`
+
+Veras que se ejecutaran las migraciones, al terminar deberas tener todas las tablas necesarias para el proyecto
+
+#### Quiero tener datos en las tablas pero no tengo tiempo para llenarlas, ¿Que hago?
+
+Laravel tiene un componente llamado Seeders, este proyecto cuenta con Factories y Seeders configurados por lo que podras
+tener datos iniciales (RANDOM) para que puedas ir probando desde el inicio
+
+Debes ejecutar el comando 
+
+`php artisan db:seed`
+
+Al finalizar la ejecucion, tendras datos en las tablas, no se pretende que sean datos del todo correcto, pero algo a nada...
+
+En caso quieras configurar la cantidad, y tipo de datos insertados, modifica los Factory y DatabaseSeeder
 ## About Laravel
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
