@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('invitaciones', function (Blueprint $table) {
+        Schema::create('confirmaciones', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre')->nullable();;
-            $table->date('fecha_evento');
-            $table->string('lugar_evento')->nullable();
-            $table->string('url_lugar_evento')->nullable();
-            $table->integer('user_id');
+            $table->unsignedBigInteger("invitado_id");
+            $table->boolean('confirmado');
+            $table->dateTime('fecha_confirmacion');
+            $table->tinyInteger('total_personas_conf');
+
             $table->timestamps();
+            $table->foreign('invitado_id')->references('id')->on('invitados');
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('invitaciones');
+        Schema::dropIfExists('confirmaciones');
     }
 };

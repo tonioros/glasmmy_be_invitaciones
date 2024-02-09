@@ -57,11 +57,11 @@ class User extends Authenticatable implements JWTSubject
     }
 
     /**
-     * Get a '1' encrypted because we're not using password, only the access token
-     * so, not matters
+     * Get a '1' encrypted because we're not using password,
+     * only validate access token, so, not matters
      * @return string
      */
-    public function getAuthPassword()
+    public function getAuthPassword(): string
     {
         return '$2y$12$hptCHUoyO4K.TGILu1.cyO5GkZTPEbNg8wyn.QkSm7Tg5cC0zg46y';
     }
