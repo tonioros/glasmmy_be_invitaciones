@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -21,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'access_token',
+        'api_token'
     ];
 
     /**
@@ -29,7 +31,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
+        'id',
         'access_token',
+        'created_at',
+        'updated_at',
     ];
 
     /**
@@ -40,4 +45,24 @@ class User extends Authenticatable
     protected $casts = [
         'access_token' => 'hashed',
     ];
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims(): array
+    {
+        return [];
+    }
+
+    /**
+     * Get a '1' encrypted because we're not using password, only the access token
+     * so, not matters
+     * @return string
+     */
+    public function getAuthPassword()
+    {
+        return '$2y$12$hptCHUoyO4K.TGILu1.cyO5GkZTPEbNg8wyn.QkSm7Tg5cC0zg46y';
+    }
 }
