@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Invitacion;
-use App\Models\Invitado;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -13,11 +12,11 @@ class InvitadoController extends Controller
     public function index()
     {
         $invitacionList = Invitacion::select('id')
-                                        ->where("user_id", Auth::user()->id)->get();
-        return Invitado::whereIn("invitacion_id", $invitacionList)->get();
+            ->where("user_id", Auth::user()->id)->get();
+        return $invitacionList;
     }
 
-    public function confirmados()
+    public function confirmadosEInvitados()
     {
         $user = Auth::user();
         $invitadosList = DB::table('invitados')
@@ -25,6 +24,7 @@ class InvitadoController extends Controller
             ->rightJoin("invitaciones", "invitados.invitacion_id", "=", "invitaciones.id")
             ->where('invitaciones.user_id', $user->id)
             ->get();
+
         return $invitadosList;
     }
 
@@ -33,7 +33,7 @@ class InvitadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

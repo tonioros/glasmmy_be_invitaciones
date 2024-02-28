@@ -20,27 +20,28 @@ class DatabaseSeeder extends Seeder
 
         $allUsers = User::all();
         // Create 5 invites with different User ID (I guess)
-        Invitacion::factory()->create(['user_id'=> $allUsers->random()->id]);
-        Invitacion::factory()->create(['user_id'=> $allUsers->random()->id]);
-        Invitacion::factory()->create(['user_id'=> $allUsers->random()->id]);
-        Invitacion::factory()->create(['user_id'=> $allUsers->random()->id]);
-        Invitacion::factory()->create(['user_id'=> $allUsers->random()->id]);
+        Invitacion::factory()->create(['user_id' => $allUsers->random()->id]);
+        Invitacion::factory()->create(['user_id' => $allUsers->random()->id]);
+        Invitacion::factory()->create(['user_id' => $allUsers->random()->id]);
+        Invitacion::factory()->create(['user_id' => $allUsers->random()->id]);
+        Invitacion::factory()->create(['user_id' => $allUsers->random()->id]);
 
         $allInvitaciones = Invitacion::all();
-        // Create 10 attenders using before created Invites
-        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
-        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
-        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
-        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
-        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
-        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
+        // Create 10 without attenders using before created Invites
+        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id, 'nombre' => null]);
+        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id, 'nombre' => null]);
+        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id, 'nombre' => null]);
+        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id, 'nombre' => null]);
+        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id, 'nombre' => null]);
+        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id, 'nombre' => null]);
+        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id, 'nombre' => null]);
+        Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id, 'nombre' => null]);
+        // Create 3 Invites with attender assigned
         Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
         Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
         Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
 
         $allInvitado = Invitado::all();
-        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
-        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
         Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
         Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
         Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
