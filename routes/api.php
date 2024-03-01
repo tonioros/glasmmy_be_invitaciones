@@ -24,5 +24,6 @@ Route::post('/login', [AuthController::class,'login']);
 Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/invitacion', [InvitacionController::class,'index']);
     Route::get('/invitados', [InvitadoController::class,'index']);
+    Route::post('/invitados', [InvitadoController::class,'store']);
     Route::get('/invitadosYConfirmados', [InvitadoController::class,'confirmadosEInvitados']);
 });

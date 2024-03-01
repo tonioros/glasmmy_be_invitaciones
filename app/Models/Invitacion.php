@@ -17,9 +17,11 @@ class Invitacion extends Model
         'fecha_evento',
         'lugar_evento',
         'url_lugar_evento',
-        'user_id',
     ];
 
+    protected $hidden = [
+        'user_id',
+    ];
     /**
      * Get the user that owns the invite
      */
