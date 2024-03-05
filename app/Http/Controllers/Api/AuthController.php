@@ -14,17 +14,22 @@ class AuthController extends Controller
     {
         $access_token = $request->get('user_access_token');
         $access_token = $this->decode($access_token);
-        $token = Auth::attempt(['access_token' => $access_token, 'password' => '1']);
-        if (!!$token) {
-            $user = Auth::user();
-            $user->last_login = Carbon::now()->format("Y-m-d H:m:s");
-            $user->api_token = $token;
-            $user->save();
-            return [
-                'status' => 'success',
-                'user' => $user,
-                'type' => 'bearer',
-            ];
+        try {
+            $token = Auth::attempt(['access_token' => $access_token, 'password' => '1']);
+            if (!!$token) {
+                $user = Auth::user();
+                $user->last_login = Carbon::now()->format("Y-m-d H:m:s");
+                $user->api_token = $token;
+                $user->save();
+                return [
+                    'status' => 'success',
+                    'user' => $user,
+                    'type' => 'bearer',
+                ];
+            }
+        } catch (\Exception $e) {
+            $message = $e->getPrevious()->errorInfo[2];
+            return response()->json(['status' => 'failed', 'message' => $message], 500);
         }
         return response()->json(['status' => 'failed', 'message' => 'El token de acceso no es valido, ingresa el token correcto'], 401);
     }
