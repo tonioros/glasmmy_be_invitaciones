@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Constants\EstadosInvitacion;
+use App\Exports\InvitadosExport;
 use App\Http\Controllers\Controller;
 use App\Models\Invitacion;
 use App\Models\Invitado;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Maatwebsite\Excel\Facades\Excel;
 
 class InvitadoController extends Controller
 {
@@ -109,5 +112,30 @@ class InvitadoController extends Controller
     public function destroy(Invitacion $invitacion)
     {
         //
+    }
+
+    public function export(Request $request)
+    {
+        $filters = $request->get('filters');
+        $sort = $request->get('sort');
+        $filters = [
+            'invitacion_id' => $filters['invitacionId'],
+        ];
+        if (key_exists('estado', $filters)) {
+            $filters['confirmado'] = $this->changeEstadoValue($filters['estado']);
+        }
+        return Excel::download(new InvitadosExport($filters, $sort), "invitados.xlsx");
+    }
+
+    private function changeEstadoValue($estado)
+    {
+        if ($estado == EstadosInvitacion::CANCELADO) {
+            return 0; // Cancelo
+        } else if ($estado == EstadosInvitacion::CONFIRMADO) {
+            return 1;  // Confirmo
+        } else if ($estado == EstadosInvitacion::PENDIENTE) {
+            return null;  // Null -> esta pendiente
+        }
+        return null;
     }
 }
