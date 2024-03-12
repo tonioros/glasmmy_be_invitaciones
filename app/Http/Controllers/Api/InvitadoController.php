@@ -93,23 +93,15 @@ class InvitadoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Invitacion $invitacion)
+    public function show($access_token)
     {
-        //
+        return Invitado::where('access_token', $access_token)->with(['confirmacion'])->first();
     }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Invitacion $invitacion)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Invitacion $invitacion)
     {
         //
     }

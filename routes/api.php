@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\ConfirmacionController;
 use App\Http\Controllers\Api\InvitacionController;
 use App\Http\Controllers\Api\InvitadoController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('/login', [AuthController::class,'login']);
+
+// Para todo publico -> confirmacion
+Route::post('/confirmacion', [ConfirmacionController::class, 'store']);
+Route::get('/confirmacion/{access_token}', [ConfirmacionController::class, 'show']);
+Route::get('/invitados/{access_token}', [InvitadoController::class, 'show']);
 
 
 Route::group(['middleware' => 'auth:api'], function () {

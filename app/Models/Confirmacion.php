@@ -17,4 +17,9 @@ class Confirmacion extends Model
         'fecha_confirmacion',
         'total_personas_conf',
     ];
+
+    public function invitado()
+    {
+        return $this->hasOne(Invitado::class)->oldestOfMany();
+    }
 }

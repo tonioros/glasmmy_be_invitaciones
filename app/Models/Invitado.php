@@ -20,4 +20,9 @@ class Invitado extends Model
     ];
 
     protected $hidden = ["access_token"];
+
+    public function confirmacion()
+    {
+        return $this->hasOne(Confirmacion::class)->oldestOfMany();
+    }
 }
