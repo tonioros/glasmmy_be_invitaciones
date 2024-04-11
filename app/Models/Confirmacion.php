@@ -13,6 +13,7 @@ class Confirmacion extends Model
 
     protected $fillable = [
         "invitado_id",
+        "invitacion_id",
         'confirmado',
         'fecha_confirmacion',
         'total_personas_conf',
@@ -21,5 +22,10 @@ class Confirmacion extends Model
     public function invitado()
     {
         return $this->hasOne(Invitado::class)->oldestOfMany();
+    }
+
+    public function invitacion()
+    {
+        return $this->hasOne(Invitacion::class);
     }
 }

@@ -95,7 +95,7 @@ class InvitadoController extends Controller
      */
     public function show($access_token)
     {
-        return Invitado::where('access_token', $access_token)->with(['confirmacion'])->first();
+        return Invitado::where('access_token', $access_token)->with(['confirmacion', 'invitacion'])->first();
     }
 
     /**

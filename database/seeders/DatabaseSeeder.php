@@ -42,11 +42,12 @@ class DatabaseSeeder extends Seeder
         Invitado::factory()->create(['invitacion_id' => $allInvitaciones->random()->id]);
 
         $allInvitado = Invitado::all();
-        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
-        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
-        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
-        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
-        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id]);
+        $allInvitacion = Invitacion::all();
+        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id, 'invitacion_id' => $allInvitacion->random()->id]);
+        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id, 'invitacion_id' => $allInvitacion->random()->id]);
+        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id, 'invitacion_id' => $allInvitacion->random()->id]);
+        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id, 'invitacion_id' => $allInvitacion->random()->id]);
+        Confirmacion::factory()->create(['invitado_id' => $allInvitado->random()->id, 'invitacion_id' => $allInvitacion->random()->id]);
 
     }
 }

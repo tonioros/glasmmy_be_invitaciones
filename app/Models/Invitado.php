@@ -25,4 +25,9 @@ class Invitado extends Model
     {
         return $this->hasOne(Confirmacion::class)->oldestOfMany();
     }
+
+    public function invitacion()
+    {
+        return $this->hasOne(Invitacion::class, 'id', 'invitacion_id');
+    }
 }

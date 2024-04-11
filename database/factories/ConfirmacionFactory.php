@@ -18,6 +18,7 @@ class ConfirmacionFactory extends Factory
     {
         return [
             "invitado_id" => fake()->randomNumber(),
+            "invitacion_id" => fake()->randomNumber(),
             'confirmado' => fake()->boolean(),
             'fecha_confirmacion' => fake()->dateTime(),
             'total_personas_conf' => fake()->numberBetween(1, 5),

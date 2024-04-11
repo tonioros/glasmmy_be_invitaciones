@@ -14,12 +14,14 @@ return new class extends Migration
         Schema::create('confirmaciones', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("invitado_id");
+            $table->unsignedBigInteger("invitacion_id");
             $table->boolean('confirmado');
             $table->dateTime('fecha_confirmacion');
             $table->tinyInteger('total_personas_conf');
 
             $table->timestamps();
             $table->foreign('invitado_id')->references('id')->on('invitados');
+            $table->foreign('invitacion_id')->references('id')->on('invitaciones');
         });
     }
 
