@@ -15,7 +15,7 @@ class AuthController extends Controller
         $access_token = $request->get('user_access_token');
         $access_token = $this->decode($access_token);
         try {
-            $token = Auth::attempt(['access_token' => $access_token, 'password' => '1']);
+            $token = Auth::attempt(['access_token' => $access_token]);
             if (!!$token) {
                 $user = Auth::user();
                 $user->last_login = Carbon::now()->format("Y-m-d H:m:s");
