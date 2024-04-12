@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/main-container/dashboard/dashboard.component.scss"],
+  "sourcesContent": [".confirm-card {\r\n  background-color: rgba(175, 117, 191, 0.50);\r\n  .card-img-top {\r\n    background-color: rgba(175, 117, 191, 0.90);\r\n  }\r\n}\r\n.pending-card {\r\n  background-color: rgba(167, 225, 241, 0.50);\r\n  .card-img-top {\r\n    background-color: rgba(167, 225, 241, 0.90);\r\n  }\r\n}\r\n.rejected-card {\r\n  background-color: rgba(255, 224, 51, 0.50);\r\n  .card-img-top {\r\n    background-color: rgba(255, 224, 51, 0.90);\r\n  }\r\n}\r\n.todas-card {\r\n  background-color: rgba(255, 121, 154, 0.5);\r\n  .card-img-top {\r\n    background-color: rgba(255, 121, 154, 0.9);\r\n  }\r\n}\r\n"],
+  "mappings": "AAAA,CAAA,aACE,iBAAA,UACA,CAFF,aAEE,CAAA,aACE,iBAAA,UAGJ,CAAA,aACE,iBAAA,UACA,CAFF,aAEE,CANA,aAOE,iBAAA,UAGJ,CAAA,cACE,iBAAA,UACA,CAFF,cAEE,CAZA,aAaE,iBAAA,UAGJ,CAAA,WACE,iBAAA,UACA,CAFF,WAEE,CAlBA,aAmBE,iBAAA",
+  "names": []
+}

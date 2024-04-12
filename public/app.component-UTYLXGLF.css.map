@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.component.scss"],
+  "sourcesContent": [".size-page {\r\n  height: 100%;\r\n  width: 100%;\r\n  @media (min-width: 900px) {\r\n    height: 100vh !important\r\n  }\r\n}"],
+  "mappings": "AAAA,CAAA,UACE,OAAA,KACA,MAAA,KACA,OAAA,CAAA,SAAA,EAAA,OAHF,CAAA,UAII,OAAA",
+  "names": []
+}

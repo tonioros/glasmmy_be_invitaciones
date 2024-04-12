@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/confirmacion-form/confirmacion-form.component.scss"],
+  "sourcesContent": ["body {\r\n  color: #081E26;\r\n}\r\n\r\n.form-confirmacion {\r\n  background: #F2F0F0;\r\n}\r\n\r\n.form-confirmacion-title {\r\n  color: #081E26;\r\n}\r\n\r\n.form-confirmacion-subtitle {\r\n  color: #081E26;\r\n}\r\n\r\n.form-confirmacion-text-mesa_asignada {\r\n  color: #081E26;\r\n}\r\n\r\n.form-confirmacion-input-nombre {\r\n\r\n}\r\n\r\n.form-confirmacion-text-nombre {\r\n  color: #081E26;\r\n}\r\n\r\n.form-confirmacion-input-cant_asistir {\r\n  color: #081E26;\r\n}\r\n.form-confirmacion-text-teesperamos {\r\n  color: #081E26;\r\n}\r\n\r\n.form-confirmacion-btn-submit {\r\n  background-color: #8C8737;\r\n  color: #081E26;\r\n}\r\n"],
+  "mappings": "AAAA,KACE,MAAA,QAGF,CAAA,kBACE,WAAA,QAGF,CAAA,wBAIA,CAAA,2BAIA,CAAA,qCAQA,CAAA,8BAIA,CAAA,qCAGA,CAAA,mCAtBE,MAAA,QA0BF,CAAA,6BACE,iBAAA,QACA,MAAA",
+  "names": []
+}

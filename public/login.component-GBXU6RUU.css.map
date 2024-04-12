@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/login/login.component.scss"],
+  "sourcesContent": [".left-shadow {\r\n  box-shadow: -35px 0px 50px -42px rgba(0,0,0,0.51);\r\n  -webkit-box-shadow: -35px 0px 50px -42px rgba(0,0,0,0.51);\r\n  -moz-box-shadow: -35px 0px 50px -42px rgba(0,0,0,0.51);\r\n}\r\n.right-shadow {\r\n  box-shadow: 35px 0px 50px -42px rgba(0,0,0,0.51);\r\n  -webkit-box-shadow: 35px 0px 50px -42px rgba(0,0,0,0.51);\r\n  -moz-box-shadow: 35px 0px 50px -42px rgba(0,0,0,0.51);\r\n}"],
+  "mappings": "AAAA,CAAA,YACE,WAAA,MAAA,EAAA,KAAA,MAAA,UACA,mBAAA,MAAA,IAAA,KAAA,MAAA,KAAA,CAAA,CAAA,CAAA,CAAA,CAAA,CAAA,KACA,gBAAA,MAAA,IAAA,KAAA,MAAA,KAAA,CAAA,CAAA,CAAA,CAAA,CAAA,CAAA,KAEF,CAAA,aACE,WAAA,KAAA,EAAA,KAAA,MAAA,UACA,mBAAA,KAAA,IAAA,KAAA,MAAA,KAAA,CAAA,CAAA,CAAA,CAAA,CAAA,CAAA,KACA,gBAAA,KAAA,IAAA,KAAA,MAAA,KAAA,CAAA,CAAA,CAAA,CAAA,CAAA,CAAA",
+  "names": []
+}
