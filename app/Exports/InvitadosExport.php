@@ -42,7 +42,7 @@ class InvitadosExport implements FromCollection, WithHeadings
 
         if ($this->filters && count($this->filters) > 0) {
             foreach ($this->filters as $filterName => $filterValue) {
-                $invitadoBuild->where($filterName, $filterValue);
+                $invitadoBuild->where('invitados.'.$filterName, $filterValue);
             }
         }
 
