@@ -33,7 +33,7 @@ class InvitadoController extends Controller
             ->select(['invitados.nombre',
                 'cantidad_invitados',
                 'access_token',
-                'invitacion_id',
+                'invitados.invitacion_id',
                 'mesa_asignada',
                 'fecha_limite_confirmo',
                 'invitados.id',
