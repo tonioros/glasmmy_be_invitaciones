@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/main-container/main-container.component.scss"],
+  "sourcesContent": [".menu-toggle:hover {\r\n  background: #c7c7c7;\r\n  border-radius: 5px;\r\n  transition: 500ms;\r\n}\r\n"],
+  "mappings": "AAAA,CAAA,WAAA,OACE,WAAA,QADF,cAEE,IACA,WAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/main-container/add-invitado/add-invitado.component.scss"],
+  "sourcesContent": [".add-attendee {\r\n  width: 70%;\r\n  margin: auto;\r\n  display: block;\r\n}\r\n@media (min-width: 768px) {\r\n  .add-attendee {\r\n    width: 30%;\r\n    position: absolute;\r\n    top: 20%;\r\n    right: 14%;\r\n  }\r\n}\r\n\r\n\r\n"],
+  "mappings": "AAAA,CAAA,aACE,MAAA,IADF,OAEE,KACA,QAAA,MAEF,OAAA,CAAA,SAAA,EAAA,OACE,CANF,aAOI,MAAA,IACA,SAAA,SACA,IAAA,IACA,MAAA",
+  "names": []
+}
