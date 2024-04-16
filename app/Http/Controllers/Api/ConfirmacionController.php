@@ -23,6 +23,7 @@ class ConfirmacionController extends Controller
             'fecha_confirmacion' => 'required',
             'total_personas_conf' => 'required|integer',
             'invitado_nombre' => 'nullable|string',
+            'acompanantes' => 'nullable|string',
         ]);
         if ($validated) {
             $invitadoActual = Invitado::where('id', $request->get('invitado_id'))->first();
@@ -38,6 +39,7 @@ class ConfirmacionController extends Controller
                 ],
                 [
                     "invitacion_id" => $request->get('invitacion_id'),
+                    "acompanantes" => $request->get('acompanantes'),
                     "invitado_id" => $request->get('invitado_id'),
                     "confirmado" => $request->get('confirmado'),
                     "fecha_confirmacion" => $date,

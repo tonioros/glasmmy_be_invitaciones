@@ -18,6 +18,7 @@ class InvitadosExport implements FromCollection, WithHeadings
         'mesa_asignada',
         'fecha_limite_confirmo',
         'confirmado',
+        'acompanantes',
         'fecha_confirmacion',
         'total_personas_conf'];
 
@@ -62,6 +63,7 @@ class InvitadosExport implements FromCollection, WithHeadings
             'Mesa asignada',
             'Fecha limite confirmo',
             'Confirmacion',
+            'Acompañantes',
             'Fecha confirmacion',
             'Total personas conf'];
 

@@ -17,6 +17,7 @@ class Confirmacion extends Model
         'confirmado',
         'fecha_confirmacion',
         'total_personas_conf',
+        'acompanantes',
     ];
 
     public function invitado()
