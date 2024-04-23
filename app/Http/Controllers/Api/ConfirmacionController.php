@@ -56,8 +56,8 @@ class ConfirmacionController extends Controller
      */
     public function show($access_token)
     {
-        $confirmacion = DB::table('confirmacion')
-            ->leftJoin('invitado', 'invitado.id', 'confirmacion.invitado_id')
+        $confirmacion = DB::table('confirmaciones')
+            ->leftJoin('invitado', 'invitado.id', 'confirmaciones.invitado_id')
             ->where('invitado.access_token', $access_token)
             ->select([
                 "invitado_id",
