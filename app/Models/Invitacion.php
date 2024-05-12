@@ -17,6 +17,7 @@ class Invitacion extends Model
         'fecha_evento',
         'lugar_evento',
         'url_lugar_evento',
+        'base_url',
     ];
 
     protected $hidden = [

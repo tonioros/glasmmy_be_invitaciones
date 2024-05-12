@@ -32,6 +32,7 @@ class InvitadoController extends Controller
             ->where('invitaciones.user_id', $user->id)
             ->select(['invitados.nombre',
                 'cantidad_invitados',
+                'base_url',
                 'access_token',
                 'invitados.invitacion_id',
                 'mesa_asignada',
@@ -50,6 +51,7 @@ class InvitadoController extends Controller
             $invitacionConInvitados = [
                 'id' => $invitacion->id,
                 'nombre' => $invitacion->nombre,
+                'base_url' => $invitacion->base_url,
                 'fecha_evento' => $invitacion->fecha_evento,
                 'lugar_evento' => $invitacion->lugar_evento,
                 'url_lugar_evento' => $invitacion->url_lugar_evento,
@@ -69,7 +71,7 @@ class InvitadoController extends Controller
             'nombre' => 'nullable|string',
             'cantidad_invitados' => 'required|integer',
             "invitacion_id" => 'required|integer',
-            "mesa_asignada" => 'required|integer',
+            "mesa_asignada" => 'nullable|integer',
             "fecha_limite_confirmo" => 'date',
         ]);
 
@@ -129,5 +131,10 @@ class InvitadoController extends Controller
             return null;  // Null -> esta pendiente
         }
         return null;
+    }
+
+    public function destroy(int $invitacionID)
+    {
+        return Invitado::destroy($invitacionID);
     }
 }

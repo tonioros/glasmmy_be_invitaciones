@@ -29,6 +29,7 @@ Route::get('/invitados/{access_token}', [InvitadoController::class, 'show']);
 Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/invitacion', [InvitacionController::class,'index']);
     Route::get('/invitados', [InvitadoController::class,'index']);
+    Route::delete('/invitados/{id}', [InvitadoController::class, 'destroy']);
     Route::post('/invitados', [InvitadoController::class,'store']);
     Route::get('/invitadosYConfirmados', [InvitadoController::class,'confirmadosEInvitados']);
     Route::post('/invitadosExportar', [InvitadoController::class,'export']);

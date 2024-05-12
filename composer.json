@@ -63,6 +63,17 @@
             "php-http/discovery": true
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.packagist.org",
+            "options": {
+                "ssl": {
+                    "capath": "C:\\Users\\jxocoyro\\Downloads\\cacert-2024-03-11.pem"
+                }
+            }
+        }
+    ],
     "minimum-stability": "stable",
     "prefer-stable": true
 }
